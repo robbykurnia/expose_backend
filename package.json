@@ -8,14 +8,11 @@
     "start": "nodemon --exec babel-node index.js"
   },
   "dependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/node": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/register": "^7.8.3",
     "apollo-server-express": "^1.4.0",
     "babel-cli": "^6.26.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "config": "^3.2.5",
     "cors": "^2.8.5",
     "dataloader": "^2.0.0",
     "dotenv": "^8.2.0",
@@ -26,7 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.15",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.1",
     "pg": "^7.17.1",
     "pg-hstore": "^2.3.3",
     "react-bottom-scroll-listener": "^3.0.0",
@@ -34,7 +31,10 @@
     "sequelize": "^5.21.2",
     "sweetalert2": "^9.5.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
