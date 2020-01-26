@@ -1,6 +1,5 @@
 import "dotenv/config";
 import express from "express";
-import http from "http";
 import bodyParser from "body-parser";
 import { graphiqlExpress, graphqlExpress } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
@@ -45,21 +44,6 @@ app.use(
 
 app.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql" }));
 
-// console.log("index.js detected");
-// const httpServer = http.createServer(app);
-// const isTest = !!process.env.TEST_DATABASE;
-// const isProduction = !!process.env.DATABASE_URL;
-// const port = process.env.PORT || 8000;
-
-// sequelize.sync({ force: isTest || isProduction }).then(async () => {
-//   if (isTest || isProduction) {
-//     console.log("okeee");
-//   }
-
-//   httpServer.listen({ port }, () => {
-//     console.log(`Apollo Server on http://localhost:${port}/graphql`);
-//   });
-// });
 models.sequelize
   .sync()
   .then(() =>
